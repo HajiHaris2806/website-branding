@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Branding</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      header {
+        background: url("brick.jpg") no-repeat center center/cover;
+        color: #000000;
+        padding: 0 50px;
+        text-align: left;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 10;
+        animation: slideIn 1.5s ease-out;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      header p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin-top: 0;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      nav {
+        background: #333;
+        color: white;
+        padding: 20px 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9999;
+        transition: top 0.3s ease;
+      }
+
+      nav .brand {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #f4b400;
+      }
+
+      .hero {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 120px 20px;
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 0.5s forwards;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #ffffff;
+        margin: 40px 0;
+      }
+
+      .about img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+
+      .about h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .skills ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+      }
+
+      .skills li {
+        background-color: #6a11cb;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        margin: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .skills li:hover {
+        transform: translateY(-5px);
+      }
+
+      .contact {
+        background: #6a11cb;
+        color: white;
+        padding: 60px 20px;
+      }
+
+      .contact a {
+        color: #f4b400;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid #f4b400;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .contact a:hover {
+        background-color: #f4b400;
+        color: white;
+      }
+
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      .social-icons {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .social-icons a {
+        color: white;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #f4b400;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="brand">Personal Branding</div>
+      <div>
+        <a href="#about">Tentang Saya</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </nav>
+    <header>
+      <h1>Ilham Tifani Bintang Praduta</h1>
+      <p>Profesional | Keahlian | Pencapaian</p>
+    </header>
+    <div class="hero">
+      <h2>Selamat Datang di Website Saya</h2>
+      <p>
+        Saya adalah seorang profesional yang bersemangat untuk menciptakan
+        dampak positif melalui keahlian dan pengalaman saya. Temukan lebih
+        lanjut tentang saya di bawah ini.
+      </p>
+    </div>
+    <section id="about" class="about">
+      <img src="Logo.jpg" alt="Foto Profil" />
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya Ilham Tifani Bintang Praduta, seorang individu yang bersemangat
+        untuk terus berkembang di berbagai bidang, mulai dari teknologi hingga
+        pemasaran. Dengan latar belakang yang beragam, saya berfokus pada
+        pencapaian hasil terbaik dan dampak positif di setiap proyek yang saya
+        kerjakan.
+      </p>
+    </section>
+    <section id="skills" class="skills">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>Ngoding</li>
+        <li>Pemasaran</li>
+        <li>Bereksperimen</li>
+        <li>Mekanik</li>
+      </ul>
+    </section>
+    <section id="experience" class="experience">
+      <h2>Pengalaman</h2>
+
+      <div class="experience-item">
+        <h1>Pengalaman Ngoding Saya</h1>
+        <p>
+          <strong>Proyek:</strong> Website Portofolio Pribadi<br />
+          <strong>Deskripsi:</strong> Membuat dan mendesain website portofolio
+          menggunakan HTML, CSS, dan JavaScript untuk menampilkan informasi
+          profesional saya.<br />
+          <strong>Keahlian yang Digunakan:</strong><br />
+          - HTML5 untuk struktur halaman.<br />
+          - CSS3 untuk desain responsif.<br />
+          - JavaScript untuk menambahkan interaktivitas seperti animasi dan
+          validasi formulir.<br />
+          <strong>Hasil:</strong> Website responsif yang dapat diakses dari
+          berbagai perangkat, meningkatkan personal branding dan visibilitas
+          online.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h1>Pengalaman Pemasaran Saya</h1>
+        <p>
+          <strong>Proyek:</strong> Event Marketing untuk Acara Pendidikan<br />
+          <strong>Deskripsi:</strong> Merencanakan dan menjalankan strategi
+          pemasaran untuk acara seminar pendidikan.<br />
+          <strong>Tugas Utama:</strong><br />
+          - Membuat dan menyebarkan materi promosi seperti brosur, poster, dan
+          email blast.<br />
+          - Mengelola pemasaran melalui WhatsApp dan media sosial untuk menarik
+          peserta.<br />
+          - Melakukan follow-up ke peserta untuk umpan balik pasca acara.<br />
+          <strong>Hasil:</strong> Mengumpulkan lebih dari 500 peserta dan
+          meningkatkan awareness terhadap topik pendidikan di komunitas lokal.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h1>Pengalaman Bereksperimen Saya</h1>
+        <p>
+          <strong>Proyek:</strong> Eksperimen Strategi Pemasaran Digital<br />
+          <strong>Deskripsi:</strong> Menguji efektivitas berbagai strategi
+          pemasaran untuk meningkatkan konversi pada platform digital.<br />
+          <strong>Langkah yang Dilakukan:</strong><br />
+          - Membandingkan performa iklan Google Ads dengan Facebook Ads untuk
+          produk yang sama.<br />
+          - Menggunakan A/B testing untuk menganalisis hasil desain banner dan
+          teks iklan.<br />
+          - Melacak hasil eksperimen melalui Google Analytics dan dasbor
+          platform iklan.<br />
+          <strong>Hasil:</strong> Strategi berbasis video meningkatkan konversi
+          hingga 35% dan mengurangi CPA sebesar 20%.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h1>Pengalaman Mekanik Saya</h1>
+        <p>
+          <strong>Proyek:</strong> Perbaikan dan Pemeliharaan Kendaraan
+          Bermotor<br />
+          <strong>Deskripsi:</strong> Bertanggung jawab atas diagnosis,
+          perbaikan, dan pemeliharaan kendaraan bermotor, termasuk sepeda motor
+          dan mobil.<br />
+          <strong>Langkah yang Dilakukan:</strong><br />
+          - Menggunakan alat diagnostik untuk mengidentifikasi masalah mesin,
+          kelistrikan, atau sistem rem.<br />
+          - Melakukan penggantian suku cadang seperti kampas rem, oli, filter,
+          dan komponen lainnya.<br />
+          - Melakukan pengecekan berkala untuk memastikan kendaraan dalam
+          kondisi optimal.<br />
+          <strong>Hasil:</strong> Menurunkan tingkat kerusakan kendaraan yang
+          berulang hingga 30% dan meningkatkan kepuasan pelanggan.
+        </p>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Kontak</h2>
+      <p>
+        Untuk pertanyaan atau kolaborasi, Anda dapat menghubungi saya melalui:
+      </p>
+      <div class="social-icons">
+        <a href="mailto:iltif86429@gmail.com" title="Email Saya">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+62859102789205" title="Telepon Saya">
+          <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://linkedin.com/in/namaanda" title="LinkedIn Saya">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/ilhamtfn_" title="Instagram Saya">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p><strong>Alamat:</strong> [Bekasi, Jawa Barat, Indonesia]</p>
+    </section>
+    <footer>
+      <p>&copy; 2025 Ilham Tifani Bintang Praduta. Semua hak dilindungi.</p>
+    </footer>
+  </body>
+</html>
